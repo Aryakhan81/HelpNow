@@ -9,17 +9,33 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var titleHeader: UIView!
+    @IBOutlet weak var bodyHeader: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        titleHeader.layer.cornerRadius = 10
+        bodyHeader.layer.cornerRadius = 10
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func call911(_ sender: UIButton) {
+        let phoneNumber: String = "tel://911"
+        UIApplication.shared.openURL(URL(string: phoneNumber)!)
     }
-
-
+    
+    @IBAction func callSuicide(_ sender: UIButton) {
+        let phoneNumber: String = "tel://18002738255"
+        UIApplication.shared.openURL(URL(string: phoneNumber)!)
+    }
+    
+    @IBAction func callMental(_ sender: UIButton) {
+        let phoneNumber: String = "tel://18777264727"
+        UIApplication.shared.openURL(URL(string: phoneNumber)!)
+    }
+    
+    @IBAction func callAddiction(_ sender: UIButton) {
+        let phoneNumber: String = "tel://8554121402"
+        UIApplication.shared.openURL(URL(string: phoneNumber)!)
+    }
 }
 

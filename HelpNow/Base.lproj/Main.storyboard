@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,143 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HelpNow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ry-ma-ysK">
+                                <rect key="frame" x="16" y="185" width="288" height="359"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kaX-IL-EBF">
+                                        <rect key="frame" x="45" y="30" width="198" height="299"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Standard Emergency:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jL5-KL-HVO">
+                                                <rect key="frame" x="0.0" y="0.0" width="198" height="37.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUU-FP-GYc">
+                                                <rect key="frame" x="0.0" y="37.5" width="198" height="37.5"/>
+                                                <state key="normal" title="Call">
+                                                    <color key="titleColor" red="0.80784313725490198" green="0.12549019607843137" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="call911:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mS2-KJ-CmK"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Suicide Helpline:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdu-tQ-UnE">
+                                                <rect key="frame" x="0.0" y="75" width="198" height="37"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBc-4O-aGp">
+                                                <rect key="frame" x="0.0" y="112" width="198" height="37.5"/>
+                                                <state key="normal" title="Call">
+                                                    <color key="titleColor" red="0.80784313725490198" green="0.12549019607843137" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="callSuicide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="if4-5p-4VE"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mental Health Hotline:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gk-tP-Kcd">
+                                                <rect key="frame" x="0.0" y="149.5" width="198" height="37.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5E-om-Nyw">
+                                                <rect key="frame" x="0.0" y="187" width="198" height="37.5"/>
+                                                <state key="normal" title="Call">
+                                                    <color key="titleColor" red="0.80784313725490198" green="0.12549019607843137" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="callMental:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Vi-0W-wSZ"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Addiction Network:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMo-wg-Owb">
+                                                <rect key="frame" x="0.0" y="224.5" width="198" height="37"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcn-bE-3rI">
+                                                <rect key="frame" x="0.0" y="261.5" width="198" height="37.5"/>
+                                                <state key="normal" title="Call">
+                                                    <color key="titleColor" red="0.80784313725490198" green="0.12549019607843137" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="callAddiction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MDd-C3-5TV"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="O5E-om-Nyw" firstAttribute="height" secondItem="jL5-KL-HVO" secondAttribute="height" id="8O9-mB-Swd"/>
+                                            <constraint firstItem="GMo-wg-Owb" firstAttribute="height" secondItem="jL5-KL-HVO" secondAttribute="height" id="I4l-HQ-MVe"/>
+                                            <constraint firstItem="9gk-tP-Kcd" firstAttribute="width" secondItem="jL5-KL-HVO" secondAttribute="width" id="Q8i-Uf-DiX"/>
+                                            <constraint firstItem="GMo-wg-Owb" firstAttribute="width" secondItem="jL5-KL-HVO" secondAttribute="width" id="XOA-dE-TWv"/>
+                                            <constraint firstItem="hBc-4O-aGp" firstAttribute="height" secondItem="jL5-KL-HVO" secondAttribute="height" id="ZRb-w7-PLA"/>
+                                            <constraint firstItem="O5E-om-Nyw" firstAttribute="width" secondItem="jL5-KL-HVO" secondAttribute="width" id="cDN-Op-D6l"/>
+                                            <constraint firstItem="wdu-tQ-UnE" firstAttribute="width" secondItem="jL5-KL-HVO" secondAttribute="width" id="l1z-BX-BPb"/>
+                                            <constraint firstItem="jcn-bE-3rI" firstAttribute="height" secondItem="jL5-KL-HVO" secondAttribute="height" id="mD4-D6-Uul"/>
+                                            <constraint firstItem="BUU-FP-GYc" firstAttribute="width" secondItem="jL5-KL-HVO" secondAttribute="width" id="ohn-va-Nak"/>
+                                            <constraint firstItem="jcn-bE-3rI" firstAttribute="width" secondItem="jL5-KL-HVO" secondAttribute="width" id="qIk-8d-i3a"/>
+                                            <constraint firstItem="wdu-tQ-UnE" firstAttribute="height" secondItem="jL5-KL-HVO" secondAttribute="height" id="uAK-gV-YWX"/>
+                                            <constraint firstItem="9gk-tP-Kcd" firstAttribute="height" secondItem="jL5-KL-HVO" secondAttribute="height" id="xQU-Kd-azT"/>
+                                            <constraint firstItem="hBc-4O-aGp" firstAttribute="width" secondItem="jL5-KL-HVO" secondAttribute="width" id="yyY-6y-Eyt"/>
+                                            <constraint firstItem="BUU-FP-GYc" firstAttribute="height" secondItem="jL5-KL-HVO" secondAttribute="height" id="zs3-hY-DQQ"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="kaX-IL-EBF" secondAttribute="bottom" constant="30" id="6sj-7J-lsh"/>
+                                    <constraint firstItem="kaX-IL-EBF" firstAttribute="top" secondItem="3Ry-ma-ysK" secondAttribute="top" constant="30" id="CyJ-TA-n0j"/>
+                                    <constraint firstItem="kaX-IL-EBF" firstAttribute="leading" secondItem="3Ry-ma-ysK" secondAttribute="leading" constant="45" id="aY8-hP-B6c"/>
+                                    <constraint firstAttribute="trailing" secondItem="kaX-IL-EBF" secondAttribute="trailing" constant="45" id="ftt-UT-C4Y"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ail-zm-qRS">
+                                <rect key="frame" x="16" y="44" width="288" height="117"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Help:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFm-Gr-Ckx">
+                                        <rect key="frame" x="76.5" y="39.5" width="135.5" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="GFm-Gr-Ckx" firstAttribute="centerY" secondItem="Ail-zm-qRS" secondAttribute="centerY" id="W4z-vF-r46"/>
+                                    <constraint firstItem="GFm-Gr-Ckx" firstAttribute="centerX" secondItem="Ail-zm-qRS" secondAttribute="centerX" id="r70-cj-0EP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3Ry-ma-ysK" firstAttribute="top" secondItem="Ail-zm-qRS" secondAttribute="bottom" constant="24" id="2LJ-E9-prS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Ry-ma-ysK" secondAttribute="trailing" constant="16" id="7lQ-A0-EHP"/>
+                            <constraint firstItem="3Ry-ma-ysK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Qft-lk-pOW"/>
+                            <constraint firstItem="3Ry-ma-ysK" firstAttribute="top" secondItem="Ail-zm-qRS" secondAttribute="bottom" constant="24" id="VRN-hO-EFS"/>
+                            <constraint firstItem="Ail-zm-qRS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="WUp-pb-Gzx"/>
+                            <constraint firstItem="3Ry-ma-ysK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="185" id="c5y-De-ATd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3Ry-ma-ysK" secondAttribute="bottom" constant="24" id="dEF-OG-gYD"/>
+                            <constraint firstAttribute="trailing" secondItem="Ail-zm-qRS" secondAttribute="trailing" constant="16" id="hTC-5A-RWz"/>
+                            <constraint firstItem="Ail-zm-qRS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="oki-L9-eqn"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="bodyHeader" destination="3Ry-ma-ysK" id="SLL-Y5-Yl0"/>
+                        <outlet property="titleHeader" destination="Ail-zm-qRS" id="C5M-t0-3rR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
